@@ -1,0 +1,201 @@
+.main-title {
+  color: #fff;
+  font-size: 35px;
+  padding: 10px 0px 30px 0px;
+}
+.pin-container {
+  padding: 15px;
+}
+.pin-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  column-gap: 10px;
+  padding: 15px 0;
+}
+
+.pin-input {
+  background: #546171;
+  border-radius: 15px;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  border: 1px solid #212a35;
+  margin: 10px 5px;
+  font-size: 40px;
+  font-weight: 500;
+  box-shadow: none;
+  outline: none;
+  text-align: center;
+}
+
+.button-submit {
+  background: #3a4756;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+  border: 0;
+  outline: none;
+  padding: 10px 15px;
+  min-width: 150px;
+  margin: 0 auto;
+}
+.pin-config-container {
+  border: 1px solid #fcfcfc;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin: 50px auto;
+  max-width: 400px;
+  h3 {
+    font-size: 25px;
+    color: #fff;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      display: block;
+      padding: 10px 0;
+      label {
+        color: #fff;
+        display: inline-block;
+        min-width: 150px;
+      }
+      input {
+        background: #3a4756;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 18px;
+        border: 0;
+        outline: none;
+        padding: 10px 15px;
+      }
+    }
+  }
+}
+.alert {
+  color: #fff;
+  margin: 10px 0;
+  font-size: 18px;
+  text-align: center;
+  &.success-message {
+    color: $color-success;
+  }
+  &.error-message {
+    color: $color-error;
+  }
+}
+
+.success-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.checkmark_circle_success {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: $stroke-width;
+  stroke-miterlimit: 10;
+  stroke: $color-success;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark_circle_error {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: $stroke-width;
+  stroke-miterlimit: 10;
+  stroke: $color-error;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  display: block;
+  stroke-width: $stroke-width;
+  stroke: $checkmark-color;
+  stroke-miterlimit: 10;
+  margin: 20px auto;
+  &.success {
+    box-shadow: inset 0px 0px 0px $color-success;
+    animation: fillsuccess 0.4s ease-in-out 0.4s forwards,
+      scale 0.3s ease-in-out 0.9s both;
+  }
+  &.error {
+    box-shadow: inset 0px 0px 0px $color-error;
+    animation: fillerror 0.4s ease-in-out 0.4s forwards,
+      scale 0.3s ease-in-out 0.9s both;
+  }
+}
+
+.checkmark_check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.9s forwards;
+}
+
+.progress {
+  transform: rotate(-90deg);
+  stroke: black;
+}
+
+.progress circle {
+  stroke-dasharray: 130;
+  stroke-dashoffset: 130;
+  animation: dash 1.5s infinite;
+}
+
+@keyframes dash {
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -130;
+  }
+}
+
+.progress {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+
+  &.progress--thin {
+    left: auto;
+    right: 5%;
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes scale {
+  0%,
+  100% {
+    transform: none;
+  }
+  50% {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+@keyframes fillsuccess {
+  100% {
+    box-shadow: inset 0px 0px 0px $size/2 $color-success;
+  }
+}
+
+@keyframes fillerror {
+  100% {
+    box-shadow: inset 0px 0px 0px $size/2 $color-error;
+  }
+}

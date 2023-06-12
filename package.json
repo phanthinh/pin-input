@@ -1,0 +1,32 @@
+{
+  "name": "pin-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "cypress": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "dependencies": {
+    "@types/node": "20.2.6",
+    "@types/react": "18.2.11",
+    "@types/react-dom": "18.2.4",
+    "axios": "^1.4.0",
+    "eslint": "8.42.0",
+    "eslint-config-next": "13.4.4",
+    "next": "13.4.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-query": "^3.39.3",
+    "regex-parser": "^2.2.11",
+    "typescript": "5.1.3"
+  },
+  "devDependencies": {
+    "sass": "1.62.1",
+    "cypress": "12.3.0",
+    "start-server-and-test": "1.15.2"
+  }
+}

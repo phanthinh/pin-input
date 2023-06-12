@@ -1,0 +1,45 @@
+html {
+  position: relative;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  background-color: $main-background-color;
+  color: $primary-text-color;
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  &:hover {
+    transition: all 0.3s ease;
+  }
+}
+input[type='text'],
+[type='button'],
+textarea {
+  -webkit-appearance: none;
+}
+
+.btn {
+  box-shadow: none;
+  &:not(:disabled):not(.disabled):active:focus,
+  &:hover,
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
